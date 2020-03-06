@@ -1,0 +1,5 @@
+sr		KEYWORD1
+setPin		KEYWORD2
+setAllPins	KEYWORD2
+setAllTo	KEYWORD2
+getPinValue	KEYWORD2
