@@ -5,14 +5,16 @@
 
 class sr{
   public:
-    sr(int dataPin,int latchPin, int clockPin);
-    void setPin(int pin, bool pin_status);
-    void setAllPins(int pins);
+    sr(byte dataPin,byte latchPin, byte clockPin, byte numSr);
+    void setPin(byte pin, bool pin_status);
+    void setAllPins(unsigned long pins);
     void setAllTo(bool status);
-    int getPinValue(int pin);
+    byte getPinValue(byte pin);
+	void invertPin(byte pin);
   private:
-    int _dataPin, _latchPin, _clockPin;
-    bool _pin[8] = {0,0,0,0,0,0,0,0};
+    byte _dataPin, _latchPin, _clockPin, _numSr;
+    bool _pin[40];
+	void doShiftOut(unsigned long pin);
 };
 
 
